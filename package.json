@@ -1,0 +1,18 @@
+{
+  "name": "jquery-ui-touch-punch",
+  "version": "0.2.3",
+  "description": "Touch Event Support for jQuery UI",
+  "main": "jquery.ui.touch-punch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/furf/jquery-ui-touch-punch.git"
+  },
+  "author": "Dave Furfero",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/furf/jquery-ui-touch-punch/issues"
+  }
+}
