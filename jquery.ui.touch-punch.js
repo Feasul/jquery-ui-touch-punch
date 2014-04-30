@@ -8,7 +8,20 @@
  *  jquery.ui.widget.js
  *  jquery.ui.mouse.js
  */
-(function ($) {
+(function (window, factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['jquery'], function(){
+      return factory.apply(window, arguments);
+    });
+  } else if (typeof module === 'object' && module.exports) {
+    // NodeJS.
+    module.exports = factory.call(window, require('jquery'));
+  } else {
+    // Browser globals
+    factory.call(window, window.jQuery);
+  }
+}(typeof global === 'object' ? global : this, function ($) {
 
   // Detect touch support
   $.support.touch = 'ontouchend' in document;
@@ -177,4 +190,4 @@
     _mouseDestroy.call(self);
   };
 
-})(jQuery);
+}));
